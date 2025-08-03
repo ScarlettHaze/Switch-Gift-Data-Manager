@@ -19,10 +19,10 @@ public class WC9 : Wondercard
     private const int ChecksumOffset = 0x2C4;
 
     // Entities with set TID / SID prior to the v2.0.1 game update would've had their TID / SID modified based on the Wondercard ID.
-    private readonly HashSet<ushort> OldGifts = new() { 0024, 0025, 0028, 0501, 0503, 0504, 0505, 0506, 1002, 1003, 1005 };
+    private readonly HashSet<ushort> OldGifts = new() { 9999 };
 
     // These Gifts (Birthday Flabébé, Glaseado Cetitan, Home Gifts) could be obtained both before and after the v2.0.1 game update.
-    private readonly HashSet<ushort> MixedGifts = new() { 0001, 1524, 9021, 9022, 9023 };
+    private readonly HashSet<ushort> MixedGifts = new() { 9999 };
     public bool RequiresMethodSelection { get => MixedGifts.Contains(WCID); }
 
     public bool IsBefore201 { get; set; } = false;
